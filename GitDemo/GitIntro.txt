@@ -1,0 +1,24 @@
+1. Git
+Git is the version control software that runs locally on
+your machine. You don't need to register for an account.
+You don't need the internet to use it. You can use Git
+without ever touching Github.
+
+2. Github
+Github is a service that hosts Git repositories in the cloud
+and makes it easier to collaborate with other people.
+You do need to sign up for an account to use Github. It's
+an online place to share work that is done using Git.
+
+3.Repo:
+git Repo is a workspace which tracks and manages files within a folder.
+git inti : to create a new git repository this is something we can do once per project initialize the repo in the top-level folder containing your project.
+
+git status : for tracking the files.
+
+Local REPO       Staging Area      Remote Repo
+
+actual changes	   changes yet to be commited   remote files
+
+git add : will add the changes to staging area
+git commit will commit the code from Staging Area to Remote Repo
