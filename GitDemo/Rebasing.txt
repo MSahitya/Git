@@ -1,0 +1,54 @@
+Rebasing
+ There are two main ways to
+ use the git rebase command:- as an alternative to merging- as a cleanup tool
+Why Rebase?
+ We get a much cleaner project
+ history.  No unnecessary merge
+ commits!  We end up with a linear
+ project history.
+Rebasing!
+ We can instead rebase the feature branch
+ onto the master branch.  This moves the
+ entire feature branch so that it BEGINS at
+ the tip of the master branch.  All of the work
+ is still there, but we have re-written history.
+ Instead of using a merge commit, rebasing
+ rewrites history by creating new commits for
+ each of the original feature branch commits.
+ git switch feature
+ git rebase master
+ ❯
+ ❯
+Feature
+ Master
+ Master
+ Feature
+ Rebasing!
+ We can also wait until we are done with a
+ feature and then rebase the feature branch
+ onto the master branch.  
+git switch feature
+ git rebase master
+
+
+Interactive Rebase
+ Running git rebase with the -i option will enter the
+ interactive mode, which allows us to edit commits, add
+ files, drop commits, etc.  Note that we need to specify how
+ far back we want to rewrite commits.
+ Also, notice that we are not rebasing onto another branch.  
+Instead, we are rebasing a series of commits onto the
+ HEAD they currently are based on.
+ ❯
+ git rebase -i HEAD~4
+
+What Now?
+ In our text editor, we'll see a list of commits alongside a list
+ of commands that we can choose from. Here are a couple
+ of the more commonly used commands:
+ pick - use the commit
+ reword - use the commit, but edit the commit message
+ edit - use commit, but stop for amending
+ fixup - use commit contents but meld it into previous
+ commit and discard the commit message
+ drop - remove commit
